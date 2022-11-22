@@ -10,7 +10,20 @@ spring:
       url: jdbc:mysql://43.138.126.75:3306/reggie?serverTimezone=Asia/Shanghai
       username: root
       password: zhang134679
-
+  application:
+  redis:
+    host: 43.138.126.75
+    port: 6379
+    password: Zhang134679
+    #默认操作0号数据库
+    database: 0
+    jedis:
+      #redis连接池
+      pool:
+        max-active: 8
+        max-wait: 1ms
+        max-idle: 4 #最大空闲类
+        min-idle: 0 #最小空闲类
 
 mybatis-plus:
   configuration:
